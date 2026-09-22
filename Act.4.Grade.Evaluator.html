@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 
+Group:  Pelobell, Gabriel Rhys
+        Duran, Lode Mark
+        Vito, Reigne Estacio
+        Besa, Renz    
+-->   
+
+<head>
+    <title>Act 4 Grade Evaluator</title>
+</head>
+
+<body>
+    <Script>
+        let grade = Number(prompt("Enter your grade"));
+
+        if (grade >= 75 && grade <= 100) {
+            let attendance = prompt("Is the student attendend at least 80% of the class? (Y/N)");
+
+            if (attendance.trim().toLowerCase() == "y" || attendance.trim().toLowerCase() == "yes") {
+                alert("You passed with the grade of " + grade + "!");
+            } else if (attendance.trim().toLocaleLowerCase() == "n" || attendance.trim().toLowerCase() == "no") {
+                alert("Failed");
+            } else {
+                alert("Invalid Input");
+            }
+        } else if (grade >= 0 && grade <= 74) {
+            alert("Failed");
+        } else {
+            alert("Invalid Input");
+        }
+    </Script>
+</body>
+
+</html>
