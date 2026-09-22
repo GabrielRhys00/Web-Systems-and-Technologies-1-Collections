@@ -11,8 +11,10 @@
       alert("Too high!");
     } else if (guess < secretNumber) {
       alert("Too low!");
-    } else {
+    } else if (guess == 7) {
       alert("Correct!");
+    } else {
+      alert("Invalid input! Numbers only! ");
     }
   </script>
 </body>
