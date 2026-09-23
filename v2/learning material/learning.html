@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Absolute URLs</h2>
+<p><a href="https://www.w3.org/">W3C</a></p>
+<p><a href="https://www.google.com/">Google</a></p>
+
+<h2>Relative URLs</h2>
+<p><a href="html_images.asp">HTML Images</a></p>
+<p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+<p><a href="#C1">Jump to Chapter 1</a></p>
+<p><a href="#C2">Jump to Chapter 2</a></p>
+<p><a href="#C3">Jump to Chapter 3</a></p>
+<p><a href="#C4">Jump to Chapter 4</a></p>
+<p><a href="#C6">Jump to Chapter 6</a></p>
+<p><a href="#C10">Jump to Chapter 10</a></p>
+<h2 id="C1">Chapter 1</h2>
+<p>This chapter explains bablabla</p>
+<h2 id="C2">Chapter 2</h2>
+<p>This chapter explains bablabla</p>
+<h2 id="C3">Chapter 3</h2>
+<p>This chapter explains bablabla</p>
+<h2 id="C4">Chapter 4</h2>
+<p>This chapter explains bablabla</p>
+<h2>Chapter 5</h2>
+<p>This chapter explains bablabla</p>
+<h2 id="C6">Chapter 6</h2>
+<p>This chapter explains bablabla</p>
+<h2>Chapter 7</h2>
+<p>This chapter explains bablabla</p>
+<h2>Chapter 8</h2>
+<p>This chapter explains bablabla</p>
+<h2>Chapter 9</h2>
+<p>This chapter explains bablabla</p>
+<h2 id="C10">Chapter 10</h2>
+<p>This chapter explains bablabla</p>
+<h2>Chapter 11</h2>
+<p>This chapter explains bablabla</p>
+<h2>Chapter 12</h2>
+<p>This chapter explains bablabla</p>
+
+<h2>Image Maps</h2>
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<img src="C:\Users\QC University\Downloads\laptop.png" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="C:\Users\QC University\Downloads\computer.png">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="C:\Users\QC University\Downloads\phone.png">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="C:\Users\QC University\Downloads\coffee.png">
+</map>
+
+    <table border="0" cellpadding="10">
+
+        <!-- TABLE HEADING -->
+        <tr>
+            <th colspan="4" bgcolor="darkblue">
+                <font color="white">
+                    STUDENT GRADE REPORT
+                </font>
+            </th>
+        </tr>
+
+        <!-- COLUMN HEADINGS -->
+        <tr>
+            <th bgcolor="lightblue">Student ID</th>
+            <th bgcolor="lightblue">Student Name</th>
+            <th bgcolor="lightblue">Course</th>
+            <th bgcolor="lightblue">Grade</th>
+        </tr>
+
+        <!-- ROW 3 -->
+        <tr>
+            <td rowspan="1">2026-001</td>
+            <td>Juan Dela Cruz</td>
+            <td>BSIT</td>
+            <td bgcolor="lightgreen">90</td>
+        </tr>
+
+        <!-- ROW 4 -->
+        <tr>
+	    <td rowspan="1">2026-002</td>
+            <td>Maria Santos</td>
+            <td>BSIS</td>
+            <td bgcolor="lightgreen">92</td>
+        </tr>
+
+	   <!-- ROW 5 -->
+        <tr>
+	    <td rowspan="1">67-67</td>
+            <td>Rene Clert "Bobet" Butterbonax</td>
+            <td>BS Yapology</td>
+            <td bgcolor="lightgreen">100</td>
+        </tr>
+
+    </table>
+
+    <h1>Student Registration Form</h1>
+
+    <form action="submit.html" method="post">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="100">
+
+            <br><br>
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <br><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website">
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Gender</legend>
+
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Hobbies</legend>
+
+            <input type="checkbox" id="reading" name="hobbies" value="Reading">
+            <label for="reading">Reading</label>
+
+            <input type="checkbox" id="sports" name="hobbies" value="Sports">
+            <label for="sports">Sports</label>
+
+            <input type="checkbox" id="music" name="hobbies" value="Music">
+            <label for="music">Music</label>
+
+            <input type="checkbox" id="programming" name="hobbies" value="Programming">
+            <label for="programming">Programming</label>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="course">Course:</label>
+
+            <select id="course" name="course">
+
+                <option value="">-- Select Course --</option>
+                <option value="BSIT">BS Information Technology</option>
+                <option value="BSIS">BS Information Systems</option>
+                <option value="BSCS">BS Computer Science</option>
+                <option value="BSEE">BS Electrical Engineering</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="city">City:</label>
+
+            <input list="cities" id="city" name="city">
+
+            <datalist id="cities">
+                <option value="Manila">
+                <option value="Cebu">
+                <option value="Davao">
+                <option value="Iloilo">
+                <option value="Cagayan de Oro">
+            </datalist>
+
+            <br><br>
+
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color">
+
+            <br><br>
+
+            <label for="satisfaction">Satisfaction Level:</label>
+            <input type="range"
+                   id="satisfaction"
+                   name="satisfaction"
+                   min="0"
+                   max="100">
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Comments</legend>
+
+            <label for="message">Comments or Suggestions:</label>
+
+            <br>
+
+            <textarea id="message"
+                      name="message"
+                      rows="5"
+                      cols="50"
+                      placeholder="Enter your comments here..."></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Upload Files</legend>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo">
+
+            <br><br>
+
+            <label for="documents">Upload Documents:</label>
+            <input type="file" id="documents" name="documents" multiple>
+
+        </fieldset>
+
+        <br>
+
+        <input type="hidden" name="student_id" value="2026-001">
+
+        <input type="submit" value="Submit">
+
+        <input type="reset" value="Reset">
+
+        <button type="button" onclick="alert('Hello!')">
+            Click Me
+        </button>
+
+    </form>
+
+
+
+</body>
+</html>
