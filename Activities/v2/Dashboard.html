@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Simple Calculator - Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        fieldset {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        legend h2 {
+            margin: 0;
+            color: #333;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        #calcBtn {
+            background-color: #2196F3;
+            color: white;
+        }
+        #calcBtn:hover {
+            background-color: #1e88e5;
+        }
+        #resetBtn {
+            background-color: #757575;
+            color: white;
+        }
+        #resetBtn:hover {
+            background-color: #616161;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-left: 5px solid #2196F3;
+            border-radius: 4px;
+            white-space: pre-line;
+            min-height: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, User!</h1>
+        <a href="login.html" class="logout-btn">Logout</a>
+    </header>
+
+    <fieldset>
+      <legend><h2>Simple Calculator</h2></legend>
+
+      <label for="num1">Enter Number 1: </label>
+      <input type="number" id="num1" placeholder="First number" />
+
+      <label for="num2">Enter Number 2: </label>
+      <input type="number" id="num2" placeholder="Second number" />
+
+      <div class="btn-group">
+        <button id="calcBtn">Calculate</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <div id="result">Results will appear here...</div>
+    </fieldset>
+
+    <script>
+      const num1Input = document.getElementById("num1");
+      const num2Input = document.getElementById("num2");
+      const calcBtn = document.getElementById("calcBtn");
+      const resetBtn = document.getElementById("resetBtn");
+      const resultArea = document.getElementById("result");
+
+      calcBtn.addEventListener("click", function () {
+        const n1 = parseFloat(num1Input.value);
+        const n2 = parseFloat(num2Input.value);
+
+        if (isNaN(n1) || isNaN(n2)) {
+          resultArea.innerHTML = "<span style='color: red;'>Error: Please enter both numbers.</span>";
+          return;
+        }
+
+        const addition = n1 + n2;
+        const subtraction = n1 - n2;
+        const multiplication = n1 * n2;
+
+        let division;
+        if (n2 === 0) {
+          division = "Undefined (cannot divide by zero)";
+        } else {
+          division = (n1 / n2).toFixed(2);
+        }
+
+        resultArea.innerText =
+          "Addition: " + addition + "\n" +
+          "Subtraction: " + subtraction + "\n" +
+          "Multiplication: " + multiplication + "\n" +
+          "Division: " + division;
+      });
+
+      resetBtn.addEventListener("click", function () {
+        num1Input.value = "";
+        num2Input.value = "";
+        resultArea.innerText = "Results will appear here...";
+        num1Input.focus();
+      });
+    </script>
+</body>
+</html>

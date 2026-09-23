@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>Guessing Game</title>
+</head>
+<body>
+  <script>
+    const secretNumber = 7;
+    let guess = prompt("Guess the number:");
+
+    if (guess > secretNumber) {
+      alert("Too high!");
+    } else if (guess < secretNumber) {
+      alert("Too low!");
+    } else if (guess == 7) {
+      alert("Correct!");
+    } else {
+      alert("Invalid input! Numbers only! ");
+    }
+  </script>
+</body>
+</html>
