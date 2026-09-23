@@ -7,7 +7,10 @@
     <fieldset>
       <legend>Simple Calculator</legend>
 
+      <label for="num1">Enter Number 1: </label>
       <input type="number" id="num1" placeholder="First number" />
+      <br /><br />
+      <label for="num2">Enter Number 2: </label>
       <input type="number" id="num2" placeholder="Second number" />
       <br /><br />
 
@@ -64,73 +67,6 @@
 
         resultArea.innerText = "";
 
-        num1Input.focus();
-      });
-    </script>
-  </body>
-</html>
-<!doctype html>
-<html>
-  <head>
-    <title>Simple Calculator</title>
-  </head>
-  <body>
-    <fieldset>
-      <legend>Simple Calculator</legend>
-
-      <input type="number" id="num1" placeholder="First number" />
-      <input type="number" id="num2" placeholder="Second number" />
-      <br /><br />
-
-      <button id="calcBtn">Calculate</button>
-      <button id="resetBtn">Reset</button>
-
-      <div id="result"></div>
-    </fieldset>
-
-    <script>
-      const num1Input = document.getElementById("num1");
-      const num2Input = document.getElementById("num2");
-      const calcBtn = document.getElementById("calcBtn");
-      const resetBtn = document.getElementById("resetBtn");
-      const resultArea = document.getElementById("result");
-
-      calcBtn.addEventListener("click", function () {
-        const n1 = parseFloat(num1Input.value);
-        const n2 = parseFloat(num2Input.value);
-
-        if (isNaN(n1) || isNaN(n2)) {
-          resultArea.innerText = "Error: Please enter both numbers.";
-          return;
-        }
-
-        const addition = n1 + n2;
-        const subtraction = n1 - n2;
-        const multiplication = n1 * n2;
-
-        let division;
-        if (n2 === 0) {
-          division = "Undefined (cannot divide by zero)";
-        } else {
-          division = n1 / n2;
-        }
-        resultArea.innerText =
-          "Addition: " +
-          addition +
-          "\n" +
-          "Subtraction: " +
-          subtraction +
-          "\n" +
-          "Multiplication: " +
-          multiplication +
-          "\n" +
-          "Division: " +
-          division;
-      });
-      resetBtn.addEventListener("click", function () {
-        num1Input.value = "";
-        num2Input.value = "";
-        resultArea.innerText = "";
         num1Input.focus();
       });
     </script>
