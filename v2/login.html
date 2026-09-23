@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title> Please Login</title>
+</head>
+
+<body
+
+<form action="submit">
+    <script>
+        function validateForm() {
+            const userID = document.forms["loginForm"]["userID"].value;
+            const password = document.forms["loginForm"]["password"].value;
+
+            if (userID === "QCU" && password === "QCU") {
+                alert("Login successful!");
+                window.location.href = "Dashboard.html";
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+</script>
+    <fieldset>
+        <legend><h2>Login</h2></legend>
+        <form name="loginForm" onsubmit="validateForm(); return false;">
+        <label for="userID">User ID:</label>
+        <input type="text" id="userID" name="userID" required>
+
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <br><br>
+
+        <input type="submit" value="Login">
+        </form>
+     </fieldset>
+</body>
+</html>
