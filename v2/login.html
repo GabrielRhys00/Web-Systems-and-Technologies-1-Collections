@@ -1,11 +1,74 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> Please Login</title>
+
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        fieldset {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        legend h2 {
+            margin: 0;
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+<body>
+    <fieldset>
+        <legend><h2>Login</h2></legend>
+        <form name="loginForm" onsubmit="validateForm(); return false;">
+            <label for="userID">User ID:</label>
+            <input type="text" id="userID" name="userID" required placeholder="Enter User ID">
 
-<body
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter Password">
 
-<form action="submit">
+            <input type="submit" value="Login">
+        </form>
+    </fieldset>
+
     <script>
         function validateForm() {
             const userID = document.forms["loginForm"]["userID"].value;
@@ -18,22 +81,6 @@
                 alert("Invalid username or password.");
             }
         }
-</script>
-    <fieldset>
-        <legend><h2>Login</h2></legend>
-        <form name="loginForm" onsubmit="validateForm(); return false;">
-        <label for="userID">User ID:</label>
-        <input type="text" id="userID" name="userID" required>
-
-        <br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <br><br>
-
-        <input type="submit" value="Login">
-        </form>
-     </fieldset>
+    </script>
 </body>
 </html>
